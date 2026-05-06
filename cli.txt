@@ -1,0 +1,16 @@
+[Service]
+Environment="OLLAMA_HOST=0.0.0.0"
+Environment="OLLAMA_ORIGINS=*"
+Environment="OLLAMA_KV_CACHE_TYPE=q4_0"
+Environment="OLLAMA_FLASH_ATTENTION=1"
+Environment="OLLAMA_CONTEXT_LENGTH=65536"
+Environment="OLLAMA_NUM_PARALLEL=1"
+Environment="OLLAMA_MAX_LOADED_MODELS=2"
+Environment="OLLAMA_MAX_QUEUE=16"
+Environment="OLLAMA_KEEP_ALIVE=30m"
+Environment="OLLAMA_DEBUG=1"
+Environment="OLLAMA_RUNNER_THREADS=7"
+
+sudo systemctl edit ollama
+sudo systemctl daemon-reload
+sudo systemctl restart ollama

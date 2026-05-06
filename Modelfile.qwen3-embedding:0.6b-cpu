@@ -1,0 +1,19 @@
+FROM qwen3-embedding:0.6b
+
+# FORÇA CPU
+PARAMETER num_gpu 0
+
+# --- Parâmetros de Contexto e Memória ---
+# 128k de contexto (128 * 1024)
+PARAMETER num_ctx 32768
+# Limita o número de threads (mantenha 8 ou ajuste conforme seu CPU)
+PARAMETER num_thread 7
+
+# --- Parâmetros de Amostragem (Sampling) ---
+# min_p ajuda a filtrar tokens de baixa probabilidade sem "cortar" a criatividade
+PARAMETER min_p 0.04
+# Temperatura levemente baixa para manter a precisão no código
+#PARAMETER temperature 0.7
+#PARAMETER top_p 0.95
+# Penalidade de repetição para evitar loops em contextos longos
+#PARAMETER repeat_penalty 1.1
