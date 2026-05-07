@@ -3,6 +3,7 @@ FROM qwen3.6:27b
 # REF
 # 1 - https://www.reddit.com/r/Vllm/comments/1suasv2/qwen_33536_tool_calling_is_broken_even_worse_with/
 # 2 - https://www.reddit.com/r/Vllm/comments/1skks8n/qwen_35_27b35ba3b_tool_calling_issues_why_it/
+# 3 - https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates
 
 TEMPLATE """{{- if .Messages }}
 {{- if or .System .Tools }}<|im_start|>system
